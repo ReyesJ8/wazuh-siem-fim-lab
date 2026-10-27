@@ -44,12 +44,12 @@ To provide a clear, step-by-step deployment and configuration guide for building
 ## 3. Installing the Wazuh Manager (Ubuntu Server) 
 For official instructions, refer to the [Wazuh Installation Guide](https://documentation.wazuh.com/current/installation-guide/wazuh-server/installation-assistant.html)[cite: 1].
 
-1. Add the Wazuh GPG key:
+Add the Wazuh GPG key:
    ```bash
    curl -s [https://packages.wazuh.com/key/GPG-KEY-WAZUH](https://packages.wazuh.com/key/GPG-KEY-WAZUH) | sudo gpg --dearmor -o /usr/share/keyrings/wazuh-archive-keyring.gpg
-
-   ```markdown
-### 1. Download and Run the Installation Assistant
+   ```
+   
+Download and Run the Installation Assistant
 
 ```bash
 curl -sO [https://packages.wazuh.com/4.14/wazuh-install.sh](https://packages.wazuh.com/4.14/wazuh-install.sh) && sudo bash ./wazuh-install.sh -a -i
@@ -61,7 +61,7 @@ curl -sO [https://packages.wazuh.com/4.14/wazuh-install.sh](https://packages.waz
 
 ---
 
-### 2. Wazuh Dashboard
+Wazuh Dashboard
 
 After the installation is complete, log in to the Wazuh Dashboard.
 
@@ -72,25 +72,25 @@ ifconfig
 ```
 
 
-2. Open a browser and go to:
+Open a browser and go to:
 ```text
 https://<vm-ip>:443
 
 ```
 
 
-3. Accept any browser security warning due to the self-signed certificate and log in using the credentials displayed at the end of the installation script.
+Accept any browser security warning due to the self-signed certificate and log in using the credentials displayed at the end of the installation script.
 
 ---
 
-### 3. Install the Wazuh Agent (Windows Host)
+### 4. Install the Wazuh Agent (Windows Host)
 
 1. Download the latest Wazuh agent MSI installer from the official documentation at Wazuh Agent MSI Guide.
 2. Install the MSI package on your Windows system using the default settings.
 
 ---
 
-### 4. Register the Agent
+### 5. Register the Agent
 
 1. Generate an agent key on the Ubuntu Manager with the following command:
 ```bash
@@ -118,7 +118,7 @@ sudo /var/ossec/bin/manage_agents
 
 ---
 
-### 5. File Integrity Monitoring on Windows
+### 6. File Integrity Monitoring on Windows
 
 Wazuh supports real-time monitoring of file and folder changes using Syscheck.
 
@@ -134,14 +134,14 @@ Wazuh supports real-time monitoring of file and folder changes using Syscheck.
 
 
 
-2. **Restart the Agent:**
+**Restart the Agent:**
 * After saving the changes, restart the Wazuh agent service to apply the configuration.
 
 
 
 ---
 
-### 6. Verifying Setup
+### 7. Verifying Setup
 
 1. Open the Wazuh Dashboard in your browser.
 2. Navigate to **Agents** → ensure the Windows agent is listed and status is **Active**.
