@@ -55,6 +55,7 @@ Download and Run the Installation Assistant
 curl -sO [https://packages.wazuh.com/4.14/wazuh-install.sh](https://packages.wazuh.com/4.14/wazuh-install.sh) && sudo bash ./wazuh-install.sh -a -i
 
 ```
+<img width="1641" height="1066" alt="Installing Wazuh" src="https://github.com/user-attachments/assets/000e91c3-ae90-403b-b221-7ae974c2a725" />
 
 > **Note:** Make sure to take note of your username and password; you will need them for the next step.
 > **Note:** The installation depicts v4.12 being installed. You can upgrade to 4.14 following the Wazuh Upgrade Guide.
@@ -63,23 +64,20 @@ curl -sO [https://packages.wazuh.com/4.14/wazuh-install.sh](https://packages.waz
 
 Wazuh Dashboard
 
-After the installation is complete, log in to the Wazuh Dashboard.
+After installation completes, log in to the Wazuh Dashboard.
 
 1. Check your VM’s IP address:
 ```bash
 ifconfig
 
 ```
-
-
-Open a browser and go to:
+2. Open a browser and go to:
 ```text
 https://<vm-ip>:443
 
 ```
-
-
-Accept any browser security warning due to the self-signed certificate and log in using the credentials displayed at the end of the installation script.
+3. Accept any browser security warning due to the self-signed certificate and log in using the credentials displayed at the end of the installation script.
+<img width="2521" height="1226" alt="Dashboard" src="https://github.com/user-attachments/assets/9d716f86-fb57-4c28-8c01-8b00cfe273fe" />
 
 ---
 
@@ -98,7 +96,7 @@ sudo /var/ossec/bin/manage_agents
 
 ```
 
-
+2. Add an agent:
 * Select **A** to add an agent.
 * Assign a name.
 * Add the Windows Host IP.
@@ -106,7 +104,7 @@ sudo /var/ossec/bin/manage_agents
 * Copy the key output.
 
 
-2. Apply Key in the Windows Agent:
+3. Apply Key in the Windows Agent:
 * Open Wazuh Agent Manager GUI from the Start Menu.
 * Paste the copied key into the appropriate field.
 * Save and apply the key.
@@ -114,7 +112,7 @@ sudo /var/ossec/bin/manage_agents
 * Restart the agent service.
 * You can then go to the Wazuh dashboard and see the agent onboarded.
 
-
+<img width="1237" height="794" alt="Register the Agent" src="https://github.com/user-attachments/assets/a3e58c40-5470-4c8f-b0b6-8a763ba5dd7a" />
 
 ---
 
@@ -130,14 +128,10 @@ Wazuh supports real-time monitoring of file and folder changes using Syscheck.
 <directories realtime="yes">C:\Users\<your-username>\Documents\Wazuh_test</directories>
 
 ```
-
-
-
+<img width="624" height="101" alt="ossec-conf" src="https://github.com/user-attachments/assets/b8dc7ad9-c03f-42c8-9cee-7afbd80e1f1f" />
 
 **Restart the Agent:**
 * After saving the changes, restart the Wazuh agent service to apply the configuration.
-
-
 
 ---
 
@@ -150,5 +144,5 @@ Wazuh supports real-time monitoring of file and folder changes using Syscheck.
 5. Confirm that alerts appear in the dashboard.
 
 ```
-
 ```
+<img width="2494" height="452" alt="Alerts" src="https://github.com/user-attachments/assets/60563045-88fe-4860-958f-12816fefd299" />
