@@ -143,6 +143,4 @@ Wazuh supports real-time monitoring of file and folder changes using Syscheck.
 4. Perform actions (create/modify/delete files) in the monitored folder.
 5. Confirm that alerts appear in the dashboard.
 
-```
-```
 <img width="2494" height="452" alt="Alerts" src="https://github.com/user-attachments/assets/60563045-88fe-4860-958f-12816fefd299" />
