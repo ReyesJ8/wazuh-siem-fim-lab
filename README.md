@@ -126,9 +126,8 @@ Wazuh supports real-time monitoring of file and folder changes using Syscheck.
 * Add the following entry inside the Directory block to monitor the specified folder in real-time:
 ```xml
 <directories realtime="yes">C:\Users\<your-username>\Documents\Wazuh_test</directories>
-
 ```
-<img width="624" height="101" alt="ossec-conf" src="https://github.com/user-attachments/assets/b8dc7ad9-c03f-42c8-9cee-7afbd80e1f1f" />
+<img width="624" height="101" alt="ossec-conf" src="https://github.com/user-attachments/assets/6f36d513-8516-4d16-8dac-415359fc3d2b" />
 
 **Restart the Agent:**
 * After saving the changes, restart the Wazuh agent service to apply the configuration.
